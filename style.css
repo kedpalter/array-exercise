@@ -1,0 +1,32 @@
+.container {
+    background-color: #ECF0F3;
+}
+
+.hint,
+.caution {
+    border: solid #eeeeee 1px;
+    border-left: solid #5BC0DE 5px;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--bs-box-shadow);
+    background-color: #fff;
+}
+
+.caution {
+    border-left: solid #FFE083 5px;
+}
+
+.btn-primary {
+    background-color: #4B70E2;
+}
+
+.btn {
+    padding: 0.6rem 2rem;
+    width: 150px;
+    box-shadow: var(--bs-box-shadow);
+    margin: 1.5rem 0;
+}
+
+.ketQua {
+    height: 60px;
+}

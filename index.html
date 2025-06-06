@@ -17,14 +17,18 @@
 <body>
     <div class="container mx-auto p-4 mt-5 shadow rounded-3">
         <div class="caution">
-            ❗Đây chỉ là gợi ý nên người làm có thể làm khác gợi ý, miễn đúng theo yêu cầu trong file đề bài
+            <strong>❗Đây chỉ là gợi ý nên người làm có thể làm khác gợi ý, miễn đúng theo yêu cầu trong file đề
+                bài</strong>
         </div>
-        <div class="themSo" id="themSo">
-            <form>
-                <input class="form-control d-inline-block w-25" type="number" id="themSo" placeholder="Nhập số n">
-                <button class="btn btn-primary rounded-5" id="btnThemSo">Thêm số</button>
+        <div class="themSo">
+            <form class="d-flex align-items-center" id="themSo">
+                <input class="form-control d-inline-block w-25 mx-5" type="number" id="themVaoChuoi"
+                    placeholder="Nhập số n">
+                <button class="btn btn-primary rounded-5 mx-2" id="btnThemSo" type="submit">Thêm số</button>
+                <button class="btn btn-warning rounded-5 mx-2" id="reset" type="reset">Reset chuỗi</button>
             </form>
-            <div class="alert alert-success"></div>
+
+            <div class="alert alert-success">👉 <span class="" id="chuoiDauVao"></span></div>
         </div>
         <div class="accordion" id="accordionExample">
             <!-- Bài 1 -->
@@ -32,17 +36,16 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Accordion Item #1
+                        1️⃣ Tổng số dương
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It’s also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
+                        <div class="hint">
+                            💡<strong>Gợi ý</strong>: Tính tổng các số dương trong chuỗi
+                        </div>
+                        <button class="btn btn-primary rounded-5" id="btnBai1">Tính tổng</button>
+                        <div class="alert alert-success ketQua">👉 <span id="ketQua1"></span></div>
                     </div>
                 </div>
             </div>
@@ -51,7 +54,7 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Accordion Item #2
+                        2️⃣ Đếm số dương
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -70,7 +73,7 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Accordion Item #3
+                        3️⃣ Tìm số nhỏ nhất
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -89,7 +92,7 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Accordion Item #4
+                        4️⃣ Tìm số dương nhỏ nhất
                     </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -108,7 +111,7 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Accordion Item #5
+                        5️⃣ Tìm số chẵn cuối cùng
                     </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -127,7 +130,7 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        Accordion Item #6
+                        6️⃣ Đổi chỗ
                     </button>
                 </h2>
                 <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -146,7 +149,7 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                        Accordion Item #7
+                        7️⃣ Sắp xếp tăng dần
                     </button>
                 </h2>
                 <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -165,7 +168,7 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                        Accordion Item #8
+                        8️⃣ Tìm số nguyên tố đầu tiên
                     </button>
                 </h2>
                 <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -184,7 +187,7 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                        Accordion Item #9
+                        9️⃣ Đếm số nguyên
                     </button>
                 </h2>
                 <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -203,7 +206,7 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                        Accordion Item #10
+                        🔟 So sánh số lượng số âm và dương
                     </button>
                 </h2>
                 <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
