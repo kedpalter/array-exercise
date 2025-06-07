@@ -22,7 +22,6 @@
 
 .btn {
     padding: 0.6rem 2rem;
-    width: 150px;
     box-shadow: var(--bs-box-shadow);
     margin: 1.5rem 0;
 }
