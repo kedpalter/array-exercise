@@ -108,31 +108,97 @@ document.querySelector('#btnBai5').onclick = function () {
 
 
 // -------------------------------- Bài 6
-// Bài 7
+// Hoán đổi vị trí
+let swap = function (arrInput, indA, indB) {
+    let tempoNum = arrInput[indA - 1];
+    arrInput.splice(indA - 1, 1, arrInput[indB - 1]);
+    arrInput.splice(indB - 1, 1, tempoNum);
+
+    return arrInput;
+}
+// DOM
+document.querySelector('#btnBai6').onclick = function () {
+    let viTri1 = +document.querySelector('#viTri1').value;
+    let viTri2 = +document.querySelector('#viTri2').value;
+
+    let ketQua6 = swap(arrDauVao, viTri1, viTri2);
+
+    document.getElementById('ketQua6').innerHTML = `Chuỗi mới sau khi hoán đổi: <strong>[${ketQua6}]</strong>`
+}
+
+// -------------------------------- Bài 7
+// Sắp xếp tăng dần
+let incrSort = function (arrInput) {
+    let output = arrInput.sort(function (phanTu, phanTuTruoc) {
+        if (phanTuTruoc > phanTu) {
+            return -1;
+        } else {
+            return 1;
+        }
+    });
+    return output;
+}
+// DOM
+document.querySelector('#btnBai7').onclick = function () {
+    let ketQua7 = incrSort(arrDauVao);
+
+    document.getElementById('ketQua7').innerHTML = ketQua7;
+}
+
 // -------------------------------- Bài 8
 // Tìm số nguyên tố đầu tiên
 let find1stPrimeNumber = function (arrInput) {
     let numCheck, primeNum;
+    let count = 0;
 
     for (let index in arrInput) {
         if (arrInput[index] > 1) {
             numCheck = arrInput[index];
 
-            for (j = 2; j < numCheck; j++) {
-                if (numCheck % j != 0) {
-                    primeNum = numCheck;
-                    break;
+            for (j = 2; j <= numCheck; j++) {
+
+                if (numCheck % j == 0) {
+                    count++;
                 }
+            };
+            if (count == 1) {
+                primeNum = numCheck;
+                break;
+            } else {
+                count = 0;
             }
         }
+
     }
     return primeNum;
 }
-console.log(find1stPrimeNumber([1, 2, 4, 3, 5, 13, 16, 15]));
+// DOM
+document.querySelector('#btnBai8').onclick = function () {
+    let ketQua8 = find1stPrimeNumber(arrDauVao);
+
+    document.getElementById('ketQua8').innerHTML = `<strong>${ketQua8}</strong> là số nguyên tố đầu tiên trong chuỗi.`
+}
 
 // -------------------------------- Bài 9
-// 
+// Đếm số nguyên
+let countInt = function (arrInput) {
+    let count = 0;
+    let arrOutput = [];
 
+    for (let i in arrInput) {
+        if (Number.isInteger(arrInput[i]) == true) {
+            count++;
+            arrOutput.push(arrInput[i]);
+        }
+    }
+    return [count, arrOutput];
+}
+// DOM
+document.querySelector('#btnBai9').onclick = function () {
+    let [ketQua9, arrMoi] = countInt(arrDauVao);
+
+    document.getElementById('ketQua9').innerHTML = `Chuỗi có <strong>${ketQua9}</strong> số nguyên. Chuỗi các số nguyên là <strong>[${arrMoi}]</strong>`;
+}
 
 
 // -------------------------------- Bài 10

@@ -22,7 +22,7 @@
         </div>
         <div class="themSo">
             <form class="d-flex align-items-center" id="themSo">
-                <input class="form-control d-inline-block w-25 mx-5" type="number" id="themVaoChuoi"
+                <input class="form-control d-inline-block w-25 mx-5" type="number" step="0.001" id="themVaoChuoi"
                     placeholder="Nhập số n">
                 <button class="btn btn-primary rounded-5 mx-2" id="btnThemSo" type="submit">Thêm số</button>
                 <button class="btn btn-warning rounded-5 mx-2" id="reset" type="reset">Reset chuỗi</button>
@@ -132,10 +132,15 @@
                 <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="hint">
-                            💡<strong>Gợi ý</strong>: [A, B, C] - đổi vị trí 0-1 -> [B, A, C]
+                            💡<strong>Gợi ý:</strong>
+                            <ul>
+                                <li>[A, B, C] - đổi vị trí 0-1 -> [B, A, C]</li>
+                                <li>Nhập vị trí theo góc nhìn user, không phải index mảng</li>
+                            </ul>
+                            
                         </div>
-                        <input type="number" class="form-control d-inline-block w-25 mx-3 mt-3" placeholder="Vị trí 1">
-                        <input type="number" class="form-control d-inline-block w-25 mx-3 mt-3" placeholder="Vị trí 2">
+                        <input type="number" class="form-control d-inline-block w-25 mx-3 mt-3" placeholder="Vị trí 1" id="viTri1">
+                        <input type="number" class="form-control d-inline-block w-25 mx-3 mt-3" placeholder="Vị trí 2" id="viTri2">
                         <button class="btn btn-primary rounded-5 d-block" id="btnBai6">Hoán đổi</button>
                         <div class="alert alert-success ketQua">👉 <span id="ketQua6"></span></div>
                     </div>
@@ -172,7 +177,7 @@
                         <div class="hint">
                             💡<strong>Gợi ý</strong>: Tìm số nguyên tố đầu tiên trong chuỗi. Số nguyên tố là số chỉ chia
                             hết
-                            cho 1 và chính nó
+                            cho 1 và chính nó.
                         </div>
                         <button class="btn btn-primary rounded-5" id="btnBai8">Tìm số nguyên tố</button>
                         <div class="alert alert-success ketQua">👉 <span id="ketQua8"></span></div>
@@ -195,7 +200,7 @@
                                 href="https://www.w3schools.com/jsref/jsref_isinteger.asp"
                                 target="_blank">Number.isInteger</a> để kiểm tra số nguyên
                         </div>
-                        <button class="btn btn-primary rounded-5" id="btnBai9">Tìm số chẵn</button>
+                        <button class="btn btn-primary rounded-5" id="btnBai9">Tìm số nguyên</button>
                         <div class="alert alert-success ketQua">👉 <span id="ketQua9"></span></div>
                     </div>
                 </div>
